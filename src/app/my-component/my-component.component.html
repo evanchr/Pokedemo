@@ -1,7 +1,3 @@
-<input [(ngModel)]="id">
-<input [(ngModel)]="id" readonly>
-<p>Valeur de l'ID : {{ id }}</p>
-
 <select [(ngModel)]="selectedPokemonId">
     <option *ngFor="let pokemon of pokemons" [value]="pokemon.id">{{pokemon.name}}</option>
 </select>
