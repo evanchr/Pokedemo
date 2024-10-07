@@ -3,3 +3,11 @@
 </select>
 
 <p>Pokemon sélectionné : {{selectedPokemonId}}</p>
+
+<input [(ngModel)]="searchString">
+
+<ul>
+    <li *ngFor="let pokemon of pokemons | filterPokemonPipe: 'name': searchString">
+        {{ pokemon.id }} - {{ pokemon.name }}
+    </li>
+</ul>

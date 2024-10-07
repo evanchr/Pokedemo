@@ -1,0 +1,21 @@
+import { Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({
+  name: 'filterPokemonPipe'
+})
+export class FilterPokemonPipePipe implements PipeTransform {
+
+  transform(pokemons: any[], property?: string, searchString?: string): any {
+    if(typeof searchString == 'undefined'){
+      return pokemons;
+    }
+    else if (typeof pokemons !== 'undefined' && typeof property !== 'undefined') {
+      return pokemons.filter((pokemon) => {
+        return pokemon[property].toLowerCase().indexOf(searchString.toLowerCase()) !== -1;
+      });
+    } else {
+      return [];
+    }
+  }
+
+}
