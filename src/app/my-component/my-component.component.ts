@@ -12,7 +12,6 @@ export class MyComponentComponent {
   selectedPokemonId: string = '';
   searchString: string | undefined;
 
-
   constructor() {
     this.pokemons.push(new Pokemon('1', 'Pikachu'));
     this.pokemons.push(new Pokemon('2', 'Bulbizarre'));
@@ -22,5 +21,9 @@ export class MyComponentComponent {
     this.pokemons.push(new Pokemon('6', 'Carapuce'));
     this.pokemons.push(new Pokemon('7', 'Carabaffe'));
     this.pokemons.push(new Pokemon('8', 'Tortank'));
+  }
+
+  codeToExecute(){
+    console.log(this.selectedPokemonId)
   }
 }
