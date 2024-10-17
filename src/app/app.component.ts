@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'pokedemo';
+  title = 'Pokedemo by Evan';
+  description = "Welcome to this Pokemons database. You can select a Pokemon below to see his details."
 }

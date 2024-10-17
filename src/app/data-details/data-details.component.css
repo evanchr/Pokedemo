@@ -1,0 +1,186 @@
+/* Style principal pour le composant */
+:host {
+    display: block;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 50%;
+  }
+  
+  /* Titres */
+  h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #ffffff;
+  }
+  
+  h4 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #838383;
+  }
+  
+  
+  /* Styles pour les images */
+
+  .bi-conteneur {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    gap: 40px;
+  }
+
+  img {
+    max-width: 100%; /* Limite la taille de l'image à la largeur de son conteneur */
+    max-height: 100%;
+    zoom: 2;
+    border-radius: 4px;
+    margin-top: 10px;
+  }
+  
+  /* Liste des capacités et statistiques */
+  ul {
+    list-style-type: none; /* Supprime les puces par défaut */
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Élément de liste */
+  li {
+    font-size: 16px;
+    padding: 5px 0;
+  }
+  
+  /* Style pour les sections vides */
+  :host ::ng-deep p:empty {
+    display: none; /* Cache les paragraphes vides */
+  }
+  
+  .water {
+    background-color: #00A3E0; /* Bleu pour le type Eau */
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.fire {
+    background-color: #FF4500; /* Rouge/orange pour le type Feu */
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.grass {
+    background-color: #4CAF50; /* Vert pour le type Plante */
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.electric {
+    background-color: #FFEA00; /* Jaune pour le type Électrique */
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.ice {
+    background-color: #00BFFF; /* Bleu clair pour le type Glace */
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.bug {
+    background-color: #A4D65E; /* Vert clair pour le type Insecte */
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.fairy {
+    background-color: #FFB6C1; /* Rose pour le type Fée */
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.flying {
+    background-color: #95b1f9; /* Rose pour le type Fée */
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.normal {
+    background-color: #9e9e9e; /* Rose pour le type Fée */
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.poison {
+    background-color: #8600bf; /* Rose pour le type Fée */
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.dragon {
+    background-color: #6208fd; /* Rose pour le type Fée */
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.rock {
+    background-color: #844600; /* Rose pour le type Fée */
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.ghost {
+    background-color: #bbbec4; /* Rose pour le type Fée */
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.ground {
+    background-color: #da7b00; /* Rose pour le type Fée */
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.dark {
+    background-color: #000000; /* Rose pour le type Fée */
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.steel {
+    background-color: #747474; /* Rose pour le type Fée */
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.psychic {
+    background-color: #f31ac0; /* Rose pour le type Fée */
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.fighting {
+    background-color: #8f0606; /* Rose pour le type Fée */
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
