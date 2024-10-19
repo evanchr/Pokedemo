@@ -1,12 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
-
-html,body {
+html, body {
     height: 100%;
 }
 
 body {
     margin: 0;
-    font-family: 'Nunito', sans-serif;
-    background-color: rgb(31, 31, 31);
-    color: white
+    font-family: 'Nunito', sans-serif; /* Police moderne */
+    background-color: rgb(31, 31, 31); /* Fond sombre global */
+    color: white; /* Texte blanc global */
 }
