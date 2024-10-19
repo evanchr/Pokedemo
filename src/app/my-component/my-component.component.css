@@ -1,0 +1,39 @@
+/* Style général pour l'input et le select dans le thème Pokémon rétro */
+input, select {
+    background-color: #F5F5DC; /* Fond beige clair pour rappeler les menus Pokémon */
+    border: 3px solid #FFCC00; /* Bordure jaune vif (Électrique) */
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+    width: 270px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Effet de relief */
+    transition: 0.3s ease;
+    font-family: 'Nunito', sans-serif; /* Police moderne */
+}
+
+/* Effet hover pour input et select */
+input:hover, select:hover {
+    border-color: #FF4500; /* Rouge pour un effet Feu au survol */
+}
+
+/* Effet focus */
+input:focus, select:focus {
+    outline: none;
+    box-shadow: 0 0 10px #FF4500; /* Effet focus rouge (Feu) */
+}
+
+/* Style pour les options du select */
+option {
+    background-color: #FFF; /* Fond blanc classique pour la lisibilité */
+    color: #000; /* Texte noir pour contraster avec le fond */
+    padding: 5px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.recherche {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    gap: 20px;
+}

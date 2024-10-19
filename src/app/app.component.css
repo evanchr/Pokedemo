@@ -1,0 +1,27 @@
+/* Style général du corps pour un thème sombre */
+body {
+    background-color: #2C2C2C; /* Fond sombre */
+    color: #FFFFFF; /* Texte blanc */
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Style pour le h1 (titre principal) */
+h1 {
+    color: #FFCC00; /* Jaune vif inspiré du type Électrique */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Effet d'ombre pour donner du relief */
+    font-size: 3em; /* Taille de police plus grande pour le titre */
+    margin-bottom: 20px;
+}
+
+/* Style pour le paragraphe */
+p {
+    color: #E0E0E0; /* Gris clair pour contraster avec le fond sombre */
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -26,7 +26,7 @@
   
   /* Styles pour les images */
 
-  .bi-conteneur {
+  .poke-conteneur {
     display: flex;
     justify-content: center; 
     align-items: center; 
@@ -184,3 +184,8 @@
     padding: 5px;
     border-radius: 5px;
 }
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed; /* Affiche un curseur différent pour un bouton désactivé */
+  }
