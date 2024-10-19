@@ -1,7 +1,12 @@
-<input [(ngModel)]="searchString" placeholder="Recherche">
-<select [(ngModel)]="selectedPokemonId">
-    <option *ngFor="let pokemon of pokemons | filterPokemonPipe: 'name': searchString" [value]="pokemon.id">{{pokemon.id}} - {{pokemon.name}}</option>
-</select>
-<br>
-<app-data-details *ngIf="selectedPokemonId" [pokemondID]="selectedPokemonId"></app-data-details>
+<div class="recherche">
+    <input [(ngModel)]="searchString" placeholder="Recherche">
 
+    <select [(ngModel)]="selectedPokemonId">
+        <option value="" disabled selected>Sélectionnez un Pokémon</option>
+        <option *ngFor="let pokemon of pokemons | filterPokemonPipe: 'name': searchString" [value]="pokemon.id">
+            {{pokemon.id}} - {{pokemon.name}}
+        </option>
+    </select>
+</div>
+
+<app-data-details *ngIf="selectedPokemonId" [pokemonID]="selectedPokemonId"></app-data-details>

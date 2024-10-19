@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { Pokemon } from '../pokemon';
+import { IPokemon, Pokemon } from '../pokemon';
 import { ApiPokemonService } from '../api-pokemon.service';
-import { IPokemon } from '../model';
 
 @Component({
   selector: 'app-my-component',
@@ -10,27 +9,20 @@ import { IPokemon } from '../model';
   providers: [ApiPokemonService]
 })
 export class MyComponentComponent {
-  id: string = '';
+  //id: string = '';
+  //searchedPokemon = '';
+  //searchId = '';
   pokemons : Pokemon[] = [];
-  selectedPokemonId = '';
-  searchedPokemon = '';
+  selectedPokemonId?: string;
   searchString = '';
-  searchId = '';
 
-  constructor(private apiService: ApiPokemonService) {
-  }
+  constructor(private apiService: ApiPokemonService) {}
 
   ngOnInit(): void {
     this.apiService.getPokemonsList().subscribe((data) => {
       data.results.forEach((pokemon: IPokemon, index: number) => {
         this.pokemons.push(new Pokemon(""+(index+1), pokemon.name))
       });
-    });
-  }
-
-  codeToExecute(){
-    this.apiService.getPokemonDetailsById(this.selectedPokemonId).subscribe((data) => {
-      this.searchedPokemon = data.name
     });
   }
 }

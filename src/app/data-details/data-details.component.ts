@@ -1,14 +1,16 @@
 import { Component, Input, SimpleChanges } from '@angular/core';
 import { ApiPokemonService } from '../api-pokemon.service';
-import { PokemonDetails } from '../model';
+import { PokemonDetails } from '../pokemon';
 
 @Component({
   selector: 'app-data-details',
   templateUrl: './data-details.component.html',
-  styleUrl: './data-details.component.css'
+  styleUrl: './data-details.component.css',
+  providers: [ApiPokemonService]
 })
 export class DataDetailsComponent {
-  @Input() pokemondID = '';
+  @Input() 
+  pokemonID = '';
   
   pokemonDetails?: PokemonDetails; 
   pokemonImage?: string;
@@ -17,8 +19,8 @@ export class DataDetailsComponent {
   constructor(private apiService: ApiPokemonService) {}
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (changes['pokemondID']) {
-      this.loadPokemonDetails(changes['pokemondID'].currentValue);
+    if (changes['pokemonID']) {
+      this.loadPokemonDetails(changes['pokemonID'].currentValue);
     }
   }
 
@@ -28,6 +30,28 @@ export class DataDetailsComponent {
       this.pokemonImage = data.sprites.front_default; 
       this.pokemonImageShiny = data.sprites.front_shiny; 
     });
+  }
+
+  previousPokemon(): void {
+    const currentId = parseInt(this.pokemonID);
+    if (currentId > 1) {
+      this.pokemonID = (currentId - 1).toString();
+      this.loadPokemonDetails(this.pokemonID);
+    }
+  }
+
+  nextPokemon(): void {
+    const currentId = parseInt(this.pokemonID);
+    this.pokemonID = (currentId + 1).toString();
+    this.loadPokemonDetails(this.pokemonID);
+  }
+
+  isPreviousDisabled(): boolean {
+    return parseInt(this.pokemonID) === 1;
+  }
+
+  isNextDisabled(): boolean {
+    return parseInt(this.pokemonID) === 1025;
   }
 
 }
