@@ -3,7 +3,7 @@
 <div class="carousel-container">
 
   <div class="poke-conteneur">
-    <button class="arrow-left" (click)="previousPokemon()" [disabled]="isPreviousDisabled()">⬅️</button>
+    <button class="arrow-left" (click)="previousPokemon()">⬅️</button>
     <div>
       <img [src]="pokemonImage" alt="{{ pokemonDetails?.name }}" />
       <p>Default skin</p>
@@ -12,7 +12,7 @@
       <img [src]="pokemonImageShiny" alt="{{ pokemonDetails?.name }}" />
       <p>Shiny version</p>
     </div>
-    <button class="arrow-right" (click)="nextPokemon()" [disabled]="isNextDisabled()">➡️</button>
+    <button class="arrow-right" (click)="nextPokemon()">➡️</button>
   </div>
 
   <h4>Types</h4>

@@ -1,7 +1,7 @@
 <div class="recherche">
     <input [(ngModel)]="searchString" placeholder="Recherche">
 
-    <select [(ngModel)]="selectedPokemonId">
+    <select [(ngModel)]="selectedPokemonId" (change)="update(selectedPokemonId)">
         <option value="" disabled selected>Sélectionnez un Pokémon</option>
         <option *ngFor="let pokemon of pokemons | filterPokemonPipe: 'name': searchString" [value]="pokemon.id">
             {{pokemon.id}} - {{pokemon.name}}
@@ -9,5 +9,4 @@
     </select>
 </div>
 <br>
-
-<app-data-details *ngIf="selectedPokemonId" [pokemonID]="selectedPokemonId"></app-data-details>
+<app-data-details></app-data-details>
