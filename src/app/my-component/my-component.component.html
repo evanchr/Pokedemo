@@ -1,12 +1,20 @@
 <div class="recherche">
-    <input [(ngModel)]="searchString" placeholder="Recherche">
 
-    <select [(ngModel)]="selectedPokemonId" (change)="update(selectedPokemonId)">
-        <option value="" disabled selected>Sélectionnez un Pokémon</option>
-        <option *ngFor="let pokemon of pokemons | filterPokemonPipe: 'name': searchString" [value]="pokemon.id">
-            {{pokemon.id}} - {{pokemon.name}}
-        </option>
-    </select>
+    <p-iconField iconPosition="left">
+        <p-inputIcon styleClass="pi pi-search" />
+        <input [(ngModel)]="searchString" pInputText placeholder="Search" />
+    </p-iconField>
+
+    
+    <p-dropdown 
+    [options]="pokemons | filterPokemonPipe: 'name': searchString" 
+    [(ngModel)]="selectedPokemonId" 
+    optionLabel="name" 
+    optionValue="id"
+    placeholder="Select a Pokemon" 
+    (onChange)="update(selectedPokemonId)"
+    />
+
 </div>
 <br>
 <app-data-details></app-data-details>

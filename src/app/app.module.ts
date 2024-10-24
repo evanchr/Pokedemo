@@ -9,6 +9,11 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { HttpClientModule } from '@angular/common/http';
 import { DataDetailsComponent } from './data-details/data-details.component';
+import { CarouselModule } from 'primeng/carousel';
+import { IconFieldModule } from 'primeng/iconfield';
+import { InputIconModule } from 'primeng/inputicon';
+import { InputTextModule } from 'primeng/inputtext';
+import { DropdownModule } from 'primeng/dropdown';
 
 @NgModule({
   declarations: [
@@ -23,6 +28,11 @@ import { DataDetailsComponent } from './data-details/data-details.component';
     AppRoutingModule,
     HttpClientModule,
     MatSlideToggleModule,
+    CarouselModule,
+    InputTextModule,
+    InputIconModule,
+    IconFieldModule,
+    DropdownModule
   ],
   providers: [
     provideAnimationsAsync()
