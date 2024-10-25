@@ -1,45 +1,40 @@
-<h3>{{ pokemonDetails?.name | titlecase }}</h3>
+<div class="name-container">
+  <h3>{{ pokemonDetails?.name | titlecase }}</h3>
+  <div class="hp-containeur">
+    <p>HP</p>
+    <h3>{{pokemonDetails?.stats?.at(0)?.base_stat}}</h3>
+    <span *ngFor="let type of pokemonDetails?.types; let last = last">
+      <span [ngClass]="type.type.name"></span><span *ngIf="!last"> | </span>
+    </span>
+  </div>
+</div>
 
-<div class="carousel-container">
-
-  <div class="poke-conteneur">
+<div class="poke-container">
+  <div>
     <button class="arrow-left" (click)="previousPokemon()">⬅️</button>
-    <div>
-      <img [src]="pokemonImage" alt="{{ pokemonDetails?.name }}" />
-      <p>Default skin</p>
-    </div>
-    <div>
-      <img [src]="pokemonImageShiny" alt="{{ pokemonDetails?.name }}" />
-      <p>Shiny version</p>
-    </div>
+  </div>
+  <div class="img-conteneur">
+    <img [src]="pokemonImage" alt="{{ pokemonDetails?.name }}" />
+    <p>Default skin</p>
+  </div>
+  <div>
     <button class="arrow-right" (click)="nextPokemon()">➡️</button>
   </div>
+</div>
 
-  <h4>Types</h4>
-  <span *ngFor="let type of pokemonDetails?.types; let last = last">
-    <span [ngClass]="type.type.name">{{ type.type.name }}</span><span *ngIf="!last"> | </span>
-  </span>
 
-  <h4>Size</h4>
-  <p>Size: {{ (pokemonDetails?.height ?? 0) / 10 }} m</p>
-  <p>Weight: {{ (pokemonDetails?.weight ?? 0) / 10 }} kg</p>
-
-  <div class="bi-conteneur">
-    <div>
-      <h4>Basic statistics</h4>
-      <ul>
-        <li *ngFor="let stat of pokemonDetails?.stats">
-          {{ stat.stat.name | titlecase }}: {{ stat.base_stat }}
-        </li>
-      </ul>
-    </div>
-    <div>
-      <h4>Attacks</h4>
-      <ul>
-        <li *ngFor="let move of pokemonDetails?.moves | slice:0:5">
-          {{ move.move.name }}
-        </li>
-      </ul>
-    </div>
+<div class="details-conteneur">
+  <div>
+    <h4>Size</h4>
+    <p>Size: {{ (pokemonDetails?.height ?? 0) / 10 }} m</p>
+    <p>Weight: {{ (pokemonDetails?.weight ?? 0) / 10 }} kg</p>
+  </div>
+  <div>
+    <h4>Attacks</h4>
+    <ul>
+      <li *ngFor="let move of pokemonDetails?.moves | slice:0:5">
+        {{ move.move.name }}
+      </li>
+    </ul>
   </div>
 </div>

@@ -1,14 +1,3 @@
-/* Style principal pour le composant */
-:host {
-    display: block;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: auto;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 50%;
-}
-
 /* Titres */
 h3 {
     font-size: 24px;
@@ -23,12 +12,35 @@ h4 {
     color: #838383;
 }
 
+
+
 /* Styles pour les images */
-.poke-conteneur {
+.poke-container {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 40px;
+}
+
+.details-conteneur{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.name-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.hp-containeur{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
 img {
@@ -61,7 +73,7 @@ li {
     background-color: #00A3E0;
     color: white;
     padding: 5px;
-    border-radius: 5px;
+    border-radius: 50%;
 }
 
 .water::before {
@@ -72,7 +84,7 @@ li {
     background-color: #FF4500;
     color: white;
     padding: 5px;
-    border-radius: 5px;
+    border-radius: 50%;
 }
 
 .fire::before {
@@ -83,7 +95,7 @@ li {
     background-color: #4CAF50;
     color: white;
     padding: 5px;
-    border-radius: 5px;
+    border-radius: 50%;
 }
 
 .grass::before {
@@ -94,7 +106,7 @@ li {
     background-color: #FFEA00;
     color: black;
     padding: 5px;
-    border-radius: 5px;
+    border-radius: 50%;
 }
 
 .electric::before {
@@ -105,7 +117,7 @@ li {
     background-color: #00BFFF;
     color: white;
     padding: 5px;
-    border-radius: 5px;
+    border-radius: 50%;
 }
 
 .ice::before {
@@ -116,7 +128,7 @@ li {
     background-color: #A4D65E;
     color: black;
     padding: 5px;
-    border-radius: 5px;
+    border-radius: 50%;
 }
 
 .bug::before {
@@ -127,7 +139,7 @@ li {
     background-color: #FFB6C1;
     color: black;
     padding: 5px;
-    border-radius: 5px;
+    border-radius: 50%;
 }
 
 .fairy::before {
@@ -138,7 +150,7 @@ li {
     background-color: #95b1f9;
     color: black;
     padding: 5px;
-    border-radius: 5px;
+    border-radius: 50%;
 }
 
 .flying::before {
@@ -149,14 +161,14 @@ li {
     background-color: #9e9e9e;
     color: black;
     padding: 5px;
-    border-radius: 5px;
+    border-radius: 50%;
 }
 
 .poison {
     background-color: #8600bf;
     color: white;
     padding: 5px;
-    border-radius: 5px;
+    border-radius: 50%;
 }
 
 .poison::before {
@@ -167,7 +179,7 @@ li {
     background-color: #6208fd;
     color: white;
     padding: 5px;
-    border-radius: 5px;
+    border-radius: 50%;
 }
 
 .dragon::before {
@@ -178,7 +190,7 @@ li {
     background-color: #844600;
     color: white;
     padding: 5px;
-    border-radius: 5px;
+    border-radius: 50%;
 }
 
 .rock::before {
@@ -189,7 +201,7 @@ li {
     background-color: #bbbec4;
     color: black;
     padding: 5px;
-    border-radius: 5px;
+    border-radius: 50%;
 }
 
 .ghost::before {
@@ -200,7 +212,7 @@ li {
     background-color: #da7b00;
     color: black;
     padding: 5px;
-    border-radius: 5px;
+    border-radius: 50%;
 }
 
 .ground::before {
@@ -211,7 +223,7 @@ li {
     background-color: #000000;
     color: white;
     padding: 5px;
-    border-radius: 5px;
+    border-radius: 50%;
 }
 
 .dark::before {
@@ -222,7 +234,7 @@ li {
     background-color: #747474;
     color: white;
     padding: 5px;
-    border-radius: 5px;
+    border-radius: 50%;
 }
 
 .steel::before {
@@ -233,7 +245,7 @@ li {
     background-color: #f31ac0;
     color: white;
     padding: 5px;
-    border-radius: 5px;
+    border-radius: 50%;
 }
 
 .psychic::before {
@@ -244,7 +256,7 @@ li {
     background-color: #8f0606;
     color: white;
     padding: 5px;
-    border-radius: 5px;
+    border-radius: 50%;
 }
 
 .fighting::before {
