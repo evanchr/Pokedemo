@@ -6,13 +6,14 @@ import { PokemonShareInfosService } from '../pokemon-share-infos.service';
 @Component({
   selector: 'app-data-details',
   templateUrl: './data-details.component.html',
-  styleUrl: './data-details.component.css'
+  styleUrls: ['./data-details.component.css']
 })
 export class DataDetailsComponent {
   pokemonID = '1';
   pokemonDetails?: PokemonDetails;
   pokemonImage?: string;
   pokemonImageShiny?: string;
+  cardBack = false;
 
   constructor(private apiService: ApiPokemonService, private pokemonShareInfos: PokemonShareInfosService) {
     this.pokemonShareInfos.getActualPokemonId().subscribe(actualId => {
@@ -27,6 +28,7 @@ export class DataDetailsComponent {
 
   loadPokemonDetails(id: string): void {
     this.apiService.getPokemonDetailsById(id).subscribe((data: PokemonDetails) => {
+      this.cardBack = false;
       this.pokemonDetails = data;
       this.pokemonImage = data.sprites.front_default;
       this.pokemonImageShiny = data.sprites.front_shiny;
@@ -49,5 +51,9 @@ export class DataDetailsComponent {
     } else {
       this.pokemonShareInfos.setActualPokemonId((currentId + 1).toString());
     }
+  }
+
+  activateBackCard(): void {
+    this.cardBack = !this.cardBack;
   }
 }

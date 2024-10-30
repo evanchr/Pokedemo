@@ -1,72 +1,140 @@
-/* Titres */
-h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #ffffff;
-}
-
-h4 {
-    font-size: 20px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    color: #838383;
-}
-
-
-
-
-/* Styles pour les images */
-.poke-container {
+.main-container {
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 40px;
+    justify-content: center;
+    gap: 20px;
+    max-width: 50%;
+    margin: auto;
 }
 
-.details-conteneur{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
+.card-button {
+    width: 45%;
+    height: 500px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
 }
 
+/* Style principal de la carte */
+.card-container {
+    background-color: #3B4CCA;
+    /* Couleur principale inspirée des cartes Pokémon */
+    border: 5px solid #FFCB05;
+    ;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    /* Ombre pour donner un effet de carte */
+    color: white;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    font-family: 'Nunito', sans-serif;
+}
+
+.card-container:hover {
+    transition: transform 0.5s ease;
+    transform: scale(1.04);
+}
+
+.img-dos {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-dos:hover {
+    transition: transform 0.5s ease;
+    transform: scale(1.04);
+}
+
+/* Style pour le nom et HP */
 .name-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 100px;
+    padding-top: 0px;
+    height: 10%;
 }
 
-.hp-containeur{
+.hp-container {
     display: flex;
-    justify-content: center;
     align-items: center;
     gap: 10px;
 }
 
-img {
-    max-width: 100%;
-    max-height: 100%;
-    zoom: 2;
-    border-radius: 4px;
-    margin-top: 10px;
-}
-
-/* Liste des capacités et statistiques */
-ul {
-    list-style-type: none;
-    padding: 0;
+.name-container h3 {
+    color: #FFCB05;
+    /* Jaune inspiré de l'énergie électrique */
     margin: 0;
 }
 
-li {
-    font-size: 16px;
-    padding: 5px 0;
+.img-container {
+    border: 3px solid #e6e6e6;
+    border-radius: 10px;
+    max-width: 100%;
+    height: 40%;
+    background-color: #e5e4ba;
 }
 
-/* Style pour les sections vides */
-:host ::ng-deep p:empty {
-    display: none;
+.img-container img {
+    height: 85%;
+}
+
+/* Conteneur pour les détails supplémentaires (taille) */
+.details-container {
+    color: rgb(73, 73, 73);
+    background-color: #e6e6e6;
+    display: flex;
+    justify-content: space-around;
+    height: 12.5%;
+}
+
+.details-container p {
+    margin: 0;
+    padding: 0;
+    line-height: 2;
+}
+
+.attacks-container h4 {
+    margin-bottom: 10px;
+}
+
+.attacks-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.attacks-container li {
+    background-color: #5fadfc;
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+
+/* Style des flèches */
+button.arrow-left,
+button.arrow-right {
+    font-size: 40px;
+    /* Taille des flèches */
+    background: none;
+    /* Pas de fond */
+    border: none;
+    /* Pas de bordure */
+    color: #FFCC00;
+    /* Couleur jaune pour correspondre au thème */
+    cursor: pointer;
+    /* Curseur pointer */
+    transition: transform 0.2s ease;
+    /* Transition pour l'effet hover */
+}
+
+/* Effet hover pour les flèches */
+button.arrow-left:hover,
+button.arrow-right:hover {
+    transform: scale(1.2);
+    /* Agrandit légèrement au survol */
 }
 
 /* Types Pokémon avec emojis et couleurs spécifiques */
@@ -82,7 +150,7 @@ li {
 }
 
 .fire {
-    background-color: #FF4500;
+    background-color: #fd7f51;
     color: white;
     padding: 5px;
     border-radius: 50%;
@@ -163,6 +231,10 @@ li {
     color: black;
     padding: 5px;
     border-radius: 50%;
+}
+
+.normal::before {
+    content: "🐾";
 }
 
 .poison {
