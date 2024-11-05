@@ -23,9 +23,9 @@
           <p>Weight : {{ (pokemonDetails?.weight ?? 0) / 10 }} kg</p>
         </div>
       </div>
-
+      <h4>Main moves</h4>
       <div class="attacks-container">
-        <h4>Main moves</h4>
+        
         <ul>
           <li *ngFor="let move of pokemonDetails?.moves | slice:0:5">
             {{ move.move.name }}
